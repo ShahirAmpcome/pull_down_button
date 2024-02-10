@@ -198,7 +198,7 @@ class _HeaderBody extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsetsDirectional.only(end: _kHeaderEndPadding),
-          child: _Leading(child: leading),
+          child: leading,
         ),
         Expanded(child: body),
         if (hasIcon)
@@ -252,13 +252,6 @@ class _Leading extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(4)),
-        boxShadow: [
-          BoxShadow(
-            color: shadowColor,
-            blurRadius: 2,
-            offset: const Offset(0, 1),
-          )
-        ],
       ),
       child: child,
     );
